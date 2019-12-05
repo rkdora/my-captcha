@@ -6,6 +6,11 @@ app.secret_key = 'hogehoge'
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+
+    # img_type = "pure"
+
+    img_type = "advs"
+
     if request.method == 'POST':
         num = request.form['num']
         ans = "認証に失敗しました"
@@ -13,10 +18,10 @@ def index():
             ans = "認証に成功しました"
 
         session['label_num'] = random.randint(0,9)
-        return render_template('index.html', ans=ans)
+        return render_template('index.html', ans=ans, img_type=img_type)
     else:
         session['label_num'] = random.randint(0,9)
-        return render_template('index.html')
+        return render_template('index.html', img_type=img_type)
 
 def is_valid_num(n):
     return len(n) == 1 and n.isdecimal()
