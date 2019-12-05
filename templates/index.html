@@ -6,6 +6,14 @@
 </head>
 <body>
   <h1>my captcha</h1>
-  <img src="/static/images/pure/{{label_num}}/{{img_num}}.jpg" width=400>
+  <img src="/static/images/pure/{{session['label_num']}}/0.jpg" width=400>
+  <form action = "/" method = "POST">
+     <p>画像の値を入力してください <input type = "text" name = "num" /></p>
+     <p><input type = "submit" value = "submit" /></p>
+  </form>
+
+  {% if ans %}
+    {{ans}}
+  {% endif %}
 </body>
 </html>
