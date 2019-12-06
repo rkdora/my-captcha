@@ -7,9 +7,9 @@ app.secret_key = 'hogehoge'
 @app.route('/', methods=['GET', 'POST'])
 def index():
 
-    # img_type = "pure"
+    img_type = "inverse"
 
-    img_type = "advs"
+    # img_type = "advs"
 
     if request.method == 'POST':
         num = request.form['num']
