@@ -11,7 +11,7 @@
   {% if ans %}
     <p class="ans" style="color: red; font-size: 40px;">{{ans}}<p>
   {% else %}
-    <img id="num_img" src="/static/images/{{img_type}}/{{session['label_num']}}/0.jpg" width=400 style="float: left;">
+    <img id="num_img" src="/static/images/{{img_type}}/{{session['label_num']}}/0.jpg" width=400>
     <form action = "/" method = "POST">
        <p>画像の値を入力してください <input type = "text" name = "num" style="font-size: 40px;"/></p>
        <p><input type = "submit" value = "submit" style="font-size: 40px"/></p>
